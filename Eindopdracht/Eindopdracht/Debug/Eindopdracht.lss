@@ -1,0 +1,812 @@
+
+Eindopdracht.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000006ce  00800100  000003fa  0000046e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003fa  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000b3c  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000b6c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000078  00000000  00000000  00000ba8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000758  00000000  00000000  00000c20  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000036c  00000000  00000000  00001378  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004fc  00000000  00000000  000016e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000154  00000000  00000000  00001be0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000027f  00000000  00000000  00001d34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000549  00000000  00000000  00001fb3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000b8  00000000  00000000  000024fc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	58 c0       	rjmp	.+176    	; 0xb6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	56 c0       	rjmp	.+172    	; 0xb6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	54 c0       	rjmp	.+168    	; 0xb6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	52 c0       	rjmp	.+164    	; 0xb6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	50 c0       	rjmp	.+160    	; 0xb6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	4e c0       	rjmp	.+156    	; 0xb6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4c c0       	rjmp	.+152    	; 0xb6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4a c0       	rjmp	.+148    	; 0xb6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	48 c0       	rjmp	.+144    	; 0xb6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	46 c0       	rjmp	.+140    	; 0xb6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	44 c0       	rjmp	.+136    	; 0xb6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	42 c0       	rjmp	.+132    	; 0xb6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	40 c0       	rjmp	.+128    	; 0xb6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	3e c0       	rjmp	.+124    	; 0xb6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3c c0       	rjmp	.+120    	; 0xb6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3a c0       	rjmp	.+116    	; 0xb6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	38 c0       	rjmp	.+112    	; 0xb6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	36 c0       	rjmp	.+108    	; 0xb6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	34 c0       	rjmp	.+104    	; 0xb6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	32 c0       	rjmp	.+100    	; 0xb6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	30 c0       	rjmp	.+96     	; 0xb6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	2e c0       	rjmp	.+92     	; 0xb6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2c c0       	rjmp	.+88     	; 0xb6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2a c0       	rjmp	.+84     	; 0xb6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	28 c0       	rjmp	.+80     	; 0xb6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	26 c0       	rjmp	.+76     	; 0xb6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	24 c0       	rjmp	.+72     	; 0xb6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	22 c0       	rjmp	.+68     	; 0xb6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	20 c0       	rjmp	.+64     	; 0xb6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1e c0       	rjmp	.+60     	; 0xb6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1a c0       	rjmp	.+52     	; 0xb6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	18 c0       	rjmp	.+48     	; 0xb6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	16 c0       	rjmp	.+44     	; 0xb6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	17 e0       	ldi	r17, 0x07	; 7
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ea ef       	ldi	r30, 0xFA	; 250
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ae 3c       	cpi	r26, 0xCE	; 206
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	02 d0       	rcall	.+4      	; 0xb8 <main>
+  b4:	a0 c1       	rjmp	.+832    	; 0x3f6 <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	a4 cf       	rjmp	.-184    	; 0x0 <__vectors>
+
+000000b8 <main>:
+};
+
+
+int main(void)
+{
+    initializeTWI();
+  b8:	33 d0       	rcall	.+102    	; 0x120 <initializeTWI>
+	clearDisplay();
+  ba:	55 d0       	rcall	.+170    	; 0x166 <clearDisplay>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  bc:	2f ef       	ldi	r18, 0xFF	; 255
+  be:	84 e3       	ldi	r24, 0x34	; 52
+  c0:	9c e0       	ldi	r25, 0x0C	; 12
+  c2:	21 50       	subi	r18, 0x01	; 1
+  c4:	80 40       	sbci	r24, 0x00	; 0
+  c6:	90 40       	sbci	r25, 0x00	; 0
+  c8:	e1 f7       	brne	.-8      	; 0xc2 <main+0xa>
+  ca:	00 c0       	rjmp	.+0      	; 0xcc <main+0x14>
+  cc:	00 00       	nop
+	_delay_ms(500);
+    while (1) 
+    {
+		//displayWord(words[0]);
+		displayString("HOI1 je2 bent- {een,} boef!!!!",31);
+  ce:	6f e1       	ldi	r22, 0x1F	; 31
+  d0:	70 e0       	ldi	r23, 0x00	; 0
+  d2:	8e ea       	ldi	r24, 0xAE	; 174
+  d4:	97 e0       	ldi	r25, 0x07	; 7
+  d6:	52 d1       	rcall	.+676    	; 0x37c <displayString>
+  d8:	2f ef       	ldi	r18, 0xFF	; 255
+  da:	82 e5       	ldi	r24, 0x52	; 82
+  dc:	97 e0       	ldi	r25, 0x07	; 7
+  de:	21 50       	subi	r18, 0x01	; 1
+  e0:	80 40       	sbci	r24, 0x00	; 0
+  e2:	90 40       	sbci	r25, 0x00	; 0
+  e4:	e1 f7       	brne	.-8      	; 0xde <main+0x26>
+  e6:	00 c0       	rjmp	.+0      	; 0xe8 <main+0x30>
+  e8:	00 00       	nop
+  ea:	f1 cf       	rjmp	.-30     	; 0xce <main+0x16>
+
+000000ec <twi_init>:
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+  ec:	10 92 71 00 	sts	0x0071, r1
+  f0:	80 e2       	ldi	r24, 0x20	; 32
+  f2:	80 93 70 00 	sts	0x0070, r24
+  f6:	08 95       	ret
+
+000000f8 <twi_start>:
+  f8:	84 ea       	ldi	r24, 0xA4	; 164
+  fa:	80 93 74 00 	sts	0x0074, r24
+  fe:	e4 e7       	ldi	r30, 0x74	; 116
+ 100:	f0 e0       	ldi	r31, 0x00	; 0
+ 102:	80 81       	ld	r24, Z
+ 104:	88 23       	and	r24, r24
+ 106:	ec f7       	brge	.-6      	; 0x102 <twi_start+0xa>
+ 108:	08 95       	ret
+
+0000010a <twi_tx>:
+}
+
+void twi_tx(unsigned char data) {
+	TWDR = data;
+ 10a:	80 93 73 00 	sts	0x0073, r24
+	TWCR = (0x80 | 0x04);
+ 10e:	84 e8       	ldi	r24, 0x84	; 132
+ 110:	80 93 74 00 	sts	0x0074, r24
+	while(0 == (TWCR & 0x80));
+ 114:	e4 e7       	ldi	r30, 0x74	; 116
+ 116:	f0 e0       	ldi	r31, 0x00	; 0
+ 118:	80 81       	ld	r24, Z
+ 11a:	88 23       	and	r24, r24
+ 11c:	ec f7       	brge	.-6      	; 0x118 <twi_tx+0xe>
+}
+ 11e:	08 95       	ret
+
+00000120 <initializeTWI>:
+
+void initializeTWI() {
+ 120:	1f 93       	push	r17
+ 122:	cf 93       	push	r28
+ 124:	df 93       	push	r29
+	twi_init();
+ 126:	e2 df       	rcall	.-60     	; 0xec <twi_init>
+	twi_start();
+ 128:	e7 df       	rcall	.-50     	; 0xf8 <twi_start>
+	twi_tx(0xE0);	// Display I2C addres + R/W bit
+ 12a:	80 ee       	ldi	r24, 0xE0	; 224
+ 12c:	ee df       	rcall	.-36     	; 0x10a <twi_tx>
+	twi_tx(0x21);	// Internal osc on (page 10 HT16K33)
+ 12e:	81 e2       	ldi	r24, 0x21	; 33
+ 130:	ec df       	rcall	.-40     	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 132:	c4 e7       	ldi	r28, 0x74	; 116
+ 134:	d0 e0       	ldi	r29, 0x00	; 0
+ 136:	14 e9       	ldi	r17, 0x94	; 148
+ 138:	18 83       	st	Y, r17
+	twi_start();
+	twi_tx(0xE0);	// Display I2C addres + R/W bit
+	twi_tx(0x21);	// Internal osc on (page 10 HT16K33)
+	twi_stop();
+
+	twi_start();
+ 13a:	de df       	rcall	.-68     	; 0xf8 <twi_start>
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+ 13c:	80 ee       	ldi	r24, 0xE0	; 224
+ 13e:	e5 df       	rcall	.-54     	; 0x10a <twi_tx>
+	twi_tx(0xA0);	// HT16K33 pins all output
+ 140:	80 ea       	ldi	r24, 0xA0	; 160
+ 142:	e3 df       	rcall	.-58     	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 144:	18 83       	st	Y, r17
+	twi_start();
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+	twi_tx(0xA0);	// HT16K33 pins all output
+	twi_stop();
+
+	twi_start();
+ 146:	d8 df       	rcall	.-80     	; 0xf8 <twi_start>
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+ 148:	80 ee       	ldi	r24, 0xE0	; 224
+ 14a:	df df       	rcall	.-66     	; 0x10a <twi_tx>
+	twi_tx(0xE3);	// Display Dimming 4/16 duty cycle
+ 14c:	83 ee       	ldi	r24, 0xE3	; 227
+ 14e:	dd df       	rcall	.-70     	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 150:	18 83       	st	Y, r17
+	twi_start();
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+	twi_tx(0xE3);	// Display Dimming 4/16 duty cycle
+	twi_stop();
+
+	twi_start();
+ 152:	d2 df       	rcall	.-92     	; 0xf8 <twi_start>
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+ 154:	80 ee       	ldi	r24, 0xE0	; 224
+ 156:	d9 df       	rcall	.-78     	; 0x10a <twi_tx>
+	twi_tx(0x81);	// Display OFF - Blink On
+ 158:	81 e8       	ldi	r24, 0x81	; 129
+ 15a:	d7 df       	rcall	.-82     	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 15c:	18 83       	st	Y, r17
+
+	twi_start();
+	twi_tx(0xE0);	// Display I2C address + R/W bit
+	twi_tx(0x81);	// Display OFF - Blink On
+	twi_stop();
+}
+ 15e:	df 91       	pop	r29
+ 160:	cf 91       	pop	r28
+ 162:	1f 91       	pop	r17
+ 164:	08 95       	ret
+
+00000166 <clearDisplay>:
+
+/************************************************************************/
+/* Clears the whole 8*8 display.                                        */
+/************************************************************************/
+void clearDisplay() {
+ 166:	0f 93       	push	r16
+ 168:	1f 93       	push	r17
+ 16a:	cf 93       	push	r28
+ 16c:	df 93       	push	r29
+ 16e:	c0 e0       	ldi	r28, 0x00	; 0
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 170:	04 e7       	ldi	r16, 0x74	; 116
+ 172:	10 e0       	ldi	r17, 0x00	; 0
+ 174:	d4 e9       	ldi	r29, 0x94	; 148
+/************************************************************************/
+/* Clears the whole 8*8 display.                                        */
+/************************************************************************/
+void clearDisplay() {
+	for(int x = 0; x < 15; x+=2) {
+		twi_start();
+ 176:	c0 df       	rcall	.-128    	; 0xf8 <twi_start>
+		twi_tx(0xE0);	// Display I2C addres + R/W bit
+ 178:	80 ee       	ldi	r24, 0xE0	; 224
+ 17a:	c7 df       	rcall	.-114    	; 0x10a <twi_tx>
+		twi_tx(x);	// Address
+ 17c:	8c 2f       	mov	r24, r28
+ 17e:	c5 df       	rcall	.-118    	; 0x10a <twi_tx>
+		twi_tx(0x00);	// data
+ 180:	80 e0       	ldi	r24, 0x00	; 0
+ 182:	c3 df       	rcall	.-122    	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 184:	f8 01       	movw	r30, r16
+ 186:	d0 83       	st	Z, r29
+ 188:	8f e1       	ldi	r24, 0x1F	; 31
+ 18a:	9e e4       	ldi	r25, 0x4E	; 78
+ 18c:	01 97       	sbiw	r24, 0x01	; 1
+ 18e:	f1 f7       	brne	.-4      	; 0x18c <clearDisplay+0x26>
+ 190:	00 c0       	rjmp	.+0      	; 0x192 <clearDisplay+0x2c>
+ 192:	00 00       	nop
+ 194:	ce 5f       	subi	r28, 0xFE	; 254
+
+/************************************************************************/
+/* Clears the whole 8*8 display.                                        */
+/************************************************************************/
+void clearDisplay() {
+	for(int x = 0; x < 15; x+=2) {
+ 196:	c0 31       	cpi	r28, 0x10	; 16
+ 198:	71 f7       	brne	.-36     	; 0x176 <clearDisplay+0x10>
+		twi_tx(x);	// Address
+		twi_tx(0x00);	// data
+		twi_stop();
+		_delay_ms(10);
+	}
+}
+ 19a:	df 91       	pop	r29
+ 19c:	cf 91       	pop	r28
+ 19e:	1f 91       	pop	r17
+ 1a0:	0f 91       	pop	r16
+ 1a2:	08 95       	ret
+
+000001a4 <displayWord>:
+
+/*********************************************************************************/
+/* Draw a given word on the 8*8 display, it will automaticcly scroll to the left */
+/*********************************************************************************/
+void displayWord(int word[]) {
+ 1a4:	2f 92       	push	r2
+ 1a6:	3f 92       	push	r3
+ 1a8:	4f 92       	push	r4
+ 1aa:	5f 92       	push	r5
+ 1ac:	6f 92       	push	r6
+ 1ae:	7f 92       	push	r7
+ 1b0:	8f 92       	push	r8
+ 1b2:	9f 92       	push	r9
+ 1b4:	af 92       	push	r10
+ 1b6:	bf 92       	push	r11
+ 1b8:	cf 92       	push	r12
+ 1ba:	df 92       	push	r13
+ 1bc:	ef 92       	push	r14
+ 1be:	ff 92       	push	r15
+ 1c0:	0f 93       	push	r16
+ 1c2:	1f 93       	push	r17
+ 1c4:	cf 93       	push	r28
+ 1c6:	df 93       	push	r29
+ 1c8:	cd b7       	in	r28, 0x3d	; 61
+ 1ca:	de b7       	in	r29, 0x3e	; 62
+ 1cc:	2a 97       	sbiw	r28, 0x0a	; 10
+ 1ce:	0f b6       	in	r0, 0x3f	; 63
+ 1d0:	f8 94       	cli
+ 1d2:	de bf       	out	0x3e, r29	; 62
+ 1d4:	0f be       	out	0x3f, r0	; 63
+ 1d6:	cd bf       	out	0x3d, r28	; 61
+	int wordSize = word[0];
+ 1d8:	dc 01       	movw	r26, r24
+ 1da:	6d 90       	ld	r6, X+
+ 1dc:	7c 90       	ld	r7, X
+	int currentrow = 0;
+	int scrollCounter = 0;
+	
+	for(int startPosition = 0; startPosition < (wordSize*5)+wordSize; startPosition++) { //Scroll-loop
+ 1de:	93 01       	movw	r18, r6
+ 1e0:	22 0f       	add	r18, r18
+ 1e2:	33 1f       	adc	r19, r19
+ 1e4:	26 0d       	add	r18, r6
+ 1e6:	37 1d       	adc	r19, r7
+ 1e8:	f9 01       	movw	r30, r18
+ 1ea:	ee 0f       	add	r30, r30
+ 1ec:	ff 1f       	adc	r31, r31
+ 1ee:	fe 83       	std	Y+6, r31	; 0x06
+ 1f0:	ed 83       	std	Y+5, r30	; 0x05
+ 1f2:	1e 16       	cp	r1, r30
+ 1f4:	1f 06       	cpc	r1, r31
+ 1f6:	0c f4       	brge	.+2      	; 0x1fa <displayWord+0x56>
+ 1f8:	8d c0       	rjmp	.+282    	; 0x314 <displayWord+0x170>
+ 1fa:	a7 c0       	rjmp	.+334    	; 0x34a <displayWord+0x1a6>
+ 1fc:	9a 82       	std	Y+2, r9	; 0x02
+ 1fe:	89 82       	std	Y+1, r8	; 0x01
+		for(int letter = 1; letter <= wordSize; letter++ ) { //Letter writing loop
+			int carachterSize = letters[word[letter]][0];
+ 200:	d4 01       	movw	r26, r8
+ 202:	12 96       	adiw	r26, 0x02	; 2
+ 204:	ed 91       	ld	r30, X+
+ 206:	fc 91       	ld	r31, X
+ 208:	13 97       	sbiw	r26, 0x03	; 3
+ 20a:	ee 0f       	add	r30, r30
+ 20c:	ff 1f       	adc	r31, r31
+ 20e:	cf 01       	movw	r24, r30
+ 210:	88 0f       	add	r24, r24
+ 212:	99 1f       	adc	r25, r25
+ 214:	88 0f       	add	r24, r24
+ 216:	99 1f       	adc	r25, r25
+ 218:	88 0f       	add	r24, r24
+ 21a:	99 1f       	adc	r25, r25
+ 21c:	e8 0f       	add	r30, r24
+ 21e:	f9 1f       	adc	r31, r25
+ 220:	e0 50       	subi	r30, 0x00	; 0
+ 222:	ff 4f       	sbci	r31, 0xFF	; 255
+ 224:	e0 80       	ld	r14, Z
+ 226:	f1 80       	ldd	r15, Z+1	; 0x01
+			for(int carachter = 1; carachter <= carachterSize; carachter++) { //Carachter writing loop
+ 228:	1e 14       	cp	r1, r14
+ 22a:	1f 04       	cpc	r1, r15
+ 22c:	c4 f5       	brge	.+112    	; 0x29e <displayWord+0xfa>
+ 22e:	0b 81       	ldd	r16, Y+3	; 0x03
+ 230:	1c 81       	ldd	r17, Y+4	; 0x04
+				if(scrollCounter >= startPosition && scrollCounter <= startPosition + 8) { //Only draw when inside the view area
+ 232:	29 85       	ldd	r18, Y+9	; 0x09
+ 234:	3a 85       	ldd	r19, Y+10	; 0x0a
+ 236:	24 15       	cp	r18, r4
+ 238:	35 05       	cpc	r19, r5
+ 23a:	34 f1       	brlt	.+76     	; 0x288 <displayWord+0xe4>
+ 23c:	22 16       	cp	r2, r18
+ 23e:	33 06       	cpc	r3, r19
+ 240:	1c f1       	brlt	.+70     	; 0x288 <displayWord+0xe4>
+					twi_start();
+ 242:	5a df       	rcall	.-332    	; 0xf8 <twi_start>
+					twi_tx(0xE0);
+ 244:	80 ee       	ldi	r24, 0xE0	; 224
+ 246:	61 df       	rcall	.-318    	; 0x10a <twi_tx>
+					twi_tx(currentrow);	
+ 248:	8a 2d       	mov	r24, r10
+ 24a:	5f df       	rcall	.-322    	; 0x10a <twi_tx>
+					twi_tx(letters[word[letter]][carachter]);
+ 24c:	a9 81       	ldd	r26, Y+1	; 0x01
+ 24e:	ba 81       	ldd	r27, Y+2	; 0x02
+ 250:	12 96       	adiw	r26, 0x02	; 2
+ 252:	8d 91       	ld	r24, X+
+ 254:	9c 91       	ld	r25, X
+ 256:	13 97       	sbiw	r26, 0x03	; 3
+ 258:	fc 01       	movw	r30, r24
+ 25a:	ee 0f       	add	r30, r30
+ 25c:	ff 1f       	adc	r31, r31
+ 25e:	ee 0f       	add	r30, r30
+ 260:	ff 1f       	adc	r31, r31
+ 262:	ee 0f       	add	r30, r30
+ 264:	ff 1f       	adc	r31, r31
+ 266:	e8 0f       	add	r30, r24
+ 268:	f9 1f       	adc	r31, r25
+ 26a:	e0 0f       	add	r30, r16
+ 26c:	f1 1f       	adc	r31, r17
+ 26e:	ee 0f       	add	r30, r30
+ 270:	ff 1f       	adc	r31, r31
+ 272:	e0 50       	subi	r30, 0x00	; 0
+ 274:	ff 4f       	sbci	r31, 0xFF	; 255
+ 276:	80 81       	ld	r24, Z
+ 278:	48 df       	rcall	.-368    	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 27a:	24 e9       	ldi	r18, 0x94	; 148
+ 27c:	e4 e7       	ldi	r30, 0x74	; 116
+ 27e:	f0 e0       	ldi	r31, 0x00	; 0
+ 280:	20 83       	st	Z, r18
+					twi_start();
+					twi_tx(0xE0);
+					twi_tx(currentrow);	
+					twi_tx(letters[word[letter]][carachter]);
+					twi_stop();
+					currentrow += 2;
+ 282:	32 e0       	ldi	r19, 0x02	; 2
+ 284:	a3 0e       	add	r10, r19
+ 286:	b1 1c       	adc	r11, r1
+				}
+				scrollCounter++;
+ 288:	49 85       	ldd	r20, Y+9	; 0x09
+ 28a:	5a 85       	ldd	r21, Y+10	; 0x0a
+ 28c:	4f 5f       	subi	r20, 0xFF	; 255
+ 28e:	5f 4f       	sbci	r21, 0xFF	; 255
+ 290:	5a 87       	std	Y+10, r21	; 0x0a
+ 292:	49 87       	std	Y+9, r20	; 0x09
+	int scrollCounter = 0;
+	
+	for(int startPosition = 0; startPosition < (wordSize*5)+wordSize; startPosition++) { //Scroll-loop
+		for(int letter = 1; letter <= wordSize; letter++ ) { //Letter writing loop
+			int carachterSize = letters[word[letter]][0];
+			for(int carachter = 1; carachter <= carachterSize; carachter++) { //Carachter writing loop
+ 294:	0f 5f       	subi	r16, 0xFF	; 255
+ 296:	1f 4f       	sbci	r17, 0xFF	; 255
+ 298:	e0 16       	cp	r14, r16
+ 29a:	f1 06       	cpc	r15, r17
+ 29c:	54 f6       	brge	.-108    	; 0x232 <displayWord+0x8e>
+					twi_stop();
+					currentrow += 2;
+				}
+				scrollCounter++;
+			}
+			if(scrollCounter >= startPosition && scrollCounter <= startPosition + 8) { //draw empty line between two carachters
+ 29e:	89 85       	ldd	r24, Y+9	; 0x09
+ 2a0:	9a 85       	ldd	r25, Y+10	; 0x0a
+ 2a2:	84 15       	cp	r24, r4
+ 2a4:	95 05       	cpc	r25, r5
+ 2a6:	8c f0       	brlt	.+34     	; 0x2ca <displayWord+0x126>
+ 2a8:	28 16       	cp	r2, r24
+ 2aa:	39 06       	cpc	r3, r25
+ 2ac:	74 f0       	brlt	.+28     	; 0x2ca <displayWord+0x126>
+				twi_start();
+ 2ae:	24 df       	rcall	.-440    	; 0xf8 <twi_start>
+				twi_tx(0xE0);
+ 2b0:	80 ee       	ldi	r24, 0xE0	; 224
+ 2b2:	2b df       	rcall	.-426    	; 0x10a <twi_tx>
+				twi_tx(currentrow);
+ 2b4:	8a 2d       	mov	r24, r10
+ 2b6:	29 df       	rcall	.-430    	; 0x10a <twi_tx>
+				twi_tx(0);	
+ 2b8:	80 e0       	ldi	r24, 0x00	; 0
+ 2ba:	27 df       	rcall	.-434    	; 0x10a <twi_tx>
+	TWCR = (0x80 | 0x20 | 0x04);
+	while(0x00 == (TWCR & 0x80));
+}
+
+void twi_stop() {
+	TWCR = (0x80 | 0x10 | 0x04);
+ 2bc:	e4 e9       	ldi	r30, 0x94	; 148
+ 2be:	a4 e7       	ldi	r26, 0x74	; 116
+ 2c0:	b0 e0       	ldi	r27, 0x00	; 0
+ 2c2:	ec 93       	st	X, r30
+				twi_start();
+				twi_tx(0xE0);
+				twi_tx(currentrow);
+				twi_tx(0);	
+				twi_stop();
+				currentrow += 2;
+ 2c4:	f2 e0       	ldi	r31, 0x02	; 2
+ 2c6:	af 0e       	add	r10, r31
+ 2c8:	b1 1c       	adc	r11, r1
+			}
+			scrollCounter++;
+ 2ca:	29 85       	ldd	r18, Y+9	; 0x09
+ 2cc:	3a 85       	ldd	r19, Y+10	; 0x0a
+ 2ce:	2f 5f       	subi	r18, 0xFF	; 255
+ 2d0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 2d2:	3a 87       	std	Y+10, r19	; 0x0a
+ 2d4:	29 87       	std	Y+9, r18	; 0x09
+	int wordSize = word[0];
+	int currentrow = 0;
+	int scrollCounter = 0;
+	
+	for(int startPosition = 0; startPosition < (wordSize*5)+wordSize; startPosition++) { //Scroll-loop
+		for(int letter = 1; letter <= wordSize; letter++ ) { //Letter writing loop
+ 2d6:	3f ef       	ldi	r19, 0xFF	; 255
+ 2d8:	63 1a       	sub	r6, r19
+ 2da:	73 0a       	sbc	r7, r19
+ 2dc:	42 e0       	ldi	r20, 0x02	; 2
+ 2de:	84 0e       	add	r8, r20
+ 2e0:	91 1c       	adc	r9, r1
+ 2e2:	c6 14       	cp	r12, r6
+ 2e4:	d7 04       	cpc	r13, r7
+ 2e6:	0c f0       	brlt	.+2      	; 0x2ea <displayWord+0x146>
+ 2e8:	89 cf       	rjmp	.-238    	; 0x1fc <displayWord+0x58>
+ 2ea:	5f ef       	ldi	r21, 0xFF	; 255
+ 2ec:	80 e7       	ldi	r24, 0x70	; 112
+ 2ee:	92 e0       	ldi	r25, 0x02	; 2
+ 2f0:	51 50       	subi	r21, 0x01	; 1
+ 2f2:	80 40       	sbci	r24, 0x00	; 0
+ 2f4:	90 40       	sbci	r25, 0x00	; 0
+ 2f6:	e1 f7       	brne	.-8      	; 0x2f0 <displayWord+0x14c>
+ 2f8:	00 c0       	rjmp	.+0      	; 0x2fa <displayWord+0x156>
+ 2fa:	00 00       	nop
+void displayWord(int word[]) {
+	int wordSize = word[0];
+	int currentrow = 0;
+	int scrollCounter = 0;
+	
+	for(int startPosition = 0; startPosition < (wordSize*5)+wordSize; startPosition++) { //Scroll-loop
+ 2fc:	af ef       	ldi	r26, 0xFF	; 255
+ 2fe:	4a 1a       	sub	r4, r26
+ 300:	5a 0a       	sbc	r5, r26
+ 302:	bf ef       	ldi	r27, 0xFF	; 255
+ 304:	2b 1a       	sub	r2, r27
+ 306:	3b 0a       	sbc	r3, r27
+ 308:	ed 81       	ldd	r30, Y+5	; 0x05
+ 30a:	fe 81       	ldd	r31, Y+6	; 0x06
+ 30c:	4e 16       	cp	r4, r30
+ 30e:	5f 06       	cpc	r5, r31
+ 310:	69 f4       	brne	.+26     	; 0x32c <displayWord+0x188>
+ 312:	1b c0       	rjmp	.+54     	; 0x34a <displayWord+0x1a6>
+ 314:	68 94       	set
+ 316:	22 24       	eor	r2, r2
+ 318:	23 f8       	bld	r2, 3
+ 31a:	31 2c       	mov	r3, r1
+ 31c:	41 2c       	mov	r4, r1
+ 31e:	51 2c       	mov	r5, r1
+ 320:	8f 83       	std	Y+7, r24	; 0x07
+ 322:	98 87       	std	Y+8, r25	; 0x08
+		for(int letter = 1; letter <= wordSize; letter++ ) { //Letter writing loop
+			int carachterSize = letters[word[letter]][0];
+			for(int carachter = 1; carachter <= carachterSize; carachter++) { //Carachter writing loop
+ 324:	f1 e0       	ldi	r31, 0x01	; 1
+ 326:	fb 83       	std	Y+3, r31	; 0x03
+ 328:	1c 82       	std	Y+4, r1	; 0x04
+ 32a:	63 01       	movw	r12, r6
+	int wordSize = word[0];
+	int currentrow = 0;
+	int scrollCounter = 0;
+	
+	for(int startPosition = 0; startPosition < (wordSize*5)+wordSize; startPosition++) { //Scroll-loop
+		for(int letter = 1; letter <= wordSize; letter++ ) { //Letter writing loop
+ 32c:	1c 14       	cp	r1, r12
+ 32e:	1d 04       	cpc	r1, r13
+ 330:	e4 f6       	brge	.-72     	; 0x2ea <displayWord+0x146>
+ 332:	8f 80       	ldd	r8, Y+7	; 0x07
+ 334:	98 84       	ldd	r9, Y+8	; 0x08
+ 336:	66 24       	eor	r6, r6
+ 338:	63 94       	inc	r6
+ 33a:	71 2c       	mov	r7, r1
+ 33c:	00 e0       	ldi	r16, 0x00	; 0
+ 33e:	10 e0       	ldi	r17, 0x00	; 0
+ 340:	a1 2c       	mov	r10, r1
+ 342:	b1 2c       	mov	r11, r1
+ 344:	1a 87       	std	Y+10, r17	; 0x0a
+ 346:	09 87       	std	Y+9, r16	; 0x09
+ 348:	59 cf       	rjmp	.-334    	; 0x1fc <displayWord+0x58>
+		}
+		currentrow = 0;
+		scrollCounter = 0;
+		_delay_ms(100);
+	}
+}
+ 34a:	2a 96       	adiw	r28, 0x0a	; 10
+ 34c:	0f b6       	in	r0, 0x3f	; 63
+ 34e:	f8 94       	cli
+ 350:	de bf       	out	0x3e, r29	; 62
+ 352:	0f be       	out	0x3f, r0	; 63
+ 354:	cd bf       	out	0x3d, r28	; 61
+ 356:	df 91       	pop	r29
+ 358:	cf 91       	pop	r28
+ 35a:	1f 91       	pop	r17
+ 35c:	0f 91       	pop	r16
+ 35e:	ff 90       	pop	r15
+ 360:	ef 90       	pop	r14
+ 362:	df 90       	pop	r13
+ 364:	cf 90       	pop	r12
+ 366:	bf 90       	pop	r11
+ 368:	af 90       	pop	r10
+ 36a:	9f 90       	pop	r9
+ 36c:	8f 90       	pop	r8
+ 36e:	7f 90       	pop	r7
+ 370:	6f 90       	pop	r6
+ 372:	5f 90       	pop	r5
+ 374:	4f 90       	pop	r4
+ 376:	3f 90       	pop	r3
+ 378:	2f 90       	pop	r2
+ 37a:	08 95       	ret
+
+0000037c <displayString>:
+
+/************************************************************************/
+/* Draw a given string on the 8*8 Display                               */		
+/* Size = amount og carachters in the string +1							*/
+/************************************************************************/
+void displayString(char string[], int size) {
+ 37c:	0f 93       	push	r16
+ 37e:	1f 93       	push	r17
+ 380:	cf 93       	push	r28
+ 382:	df 93       	push	r29
+ 384:	cd b7       	in	r28, 0x3d	; 61
+ 386:	de b7       	in	r29, 0x3e	; 62
+ 388:	58 2f       	mov	r21, r24
+ 38a:	49 2f       	mov	r20, r25
+	for(int x = 1; x <= size; x++) {
+		char letter = string[x-1];
+		word[x] = letter-32;
+	}
+	displayWord(word);
+ 38c:	0d b7       	in	r16, 0x3d	; 61
+ 38e:	1e b7       	in	r17, 0x3e	; 62
+/************************************************************************/
+/* Draw a given string on the 8*8 Display                               */		
+/* Size = amount og carachters in the string +1							*/
+/************************************************************************/
+void displayString(char string[], int size) {
+	int word[size];
+ 390:	9b 01       	movw	r18, r22
+ 392:	22 0f       	add	r18, r18
+ 394:	33 1f       	adc	r19, r19
+ 396:	8d b7       	in	r24, 0x3d	; 61
+ 398:	9e b7       	in	r25, 0x3e	; 62
+ 39a:	82 1b       	sub	r24, r18
+ 39c:	93 0b       	sbc	r25, r19
+ 39e:	0f b6       	in	r0, 0x3f	; 63
+ 3a0:	f8 94       	cli
+ 3a2:	9e bf       	out	0x3e, r25	; 62
+ 3a4:	0f be       	out	0x3f, r0	; 63
+ 3a6:	8d bf       	out	0x3d, r24	; 61
+ 3a8:	01 96       	adiw	r24, 0x01	; 1
+	word[0] = size-1;
+ 3aa:	9b 01       	movw	r18, r22
+ 3ac:	21 50       	subi	r18, 0x01	; 1
+ 3ae:	31 09       	sbc	r19, r1
+ 3b0:	ed b7       	in	r30, 0x3d	; 61
+ 3b2:	fe b7       	in	r31, 0x3e	; 62
+ 3b4:	32 83       	std	Z+2, r19	; 0x02
+ 3b6:	21 83       	std	Z+1, r18	; 0x01
+	for(int x = 1; x <= size; x++) {
+ 3b8:	16 16       	cp	r1, r22
+ 3ba:	17 06       	cpc	r1, r23
+ 3bc:	8c f4       	brge	.+34     	; 0x3e0 <displayString+0x64>
+ 3be:	e5 2f       	mov	r30, r21
+ 3c0:	f4 2f       	mov	r31, r20
+ 3c2:	dc 01       	movw	r26, r24
+ 3c4:	12 96       	adiw	r26, 0x02	; 2
+ 3c6:	41 e0       	ldi	r20, 0x01	; 1
+ 3c8:	50 e0       	ldi	r21, 0x00	; 0
+		char letter = string[x-1];
+ 3ca:	21 91       	ld	r18, Z+
+		word[x] = letter-32;
+ 3cc:	30 e0       	ldi	r19, 0x00	; 0
+ 3ce:	20 52       	subi	r18, 0x20	; 32
+ 3d0:	31 09       	sbc	r19, r1
+ 3d2:	2d 93       	st	X+, r18
+ 3d4:	3d 93       	st	X+, r19
+/* Size = amount og carachters in the string +1							*/
+/************************************************************************/
+void displayString(char string[], int size) {
+	int word[size];
+	word[0] = size-1;
+	for(int x = 1; x <= size; x++) {
+ 3d6:	4f 5f       	subi	r20, 0xFF	; 255
+ 3d8:	5f 4f       	sbci	r21, 0xFF	; 255
+ 3da:	64 17       	cp	r22, r20
+ 3dc:	75 07       	cpc	r23, r21
+ 3de:	ac f7       	brge	.-22     	; 0x3ca <displayString+0x4e>
+		char letter = string[x-1];
+		word[x] = letter-32;
+	}
+	displayWord(word);
+ 3e0:	e1 de       	rcall	.-574    	; 0x1a4 <displayWord>
+ 3e2:	0f b6       	in	r0, 0x3f	; 63
+ 3e4:	f8 94       	cli
+ 3e6:	1e bf       	out	0x3e, r17	; 62
+ 3e8:	0f be       	out	0x3f, r0	; 63
+ 3ea:	0d bf       	out	0x3d, r16	; 61
+ 3ec:	df 91       	pop	r29
+ 3ee:	cf 91       	pop	r28
+ 3f0:	1f 91       	pop	r17
+ 3f2:	0f 91       	pop	r16
+ 3f4:	08 95       	ret
+
+000003f6 <_exit>:
+ 3f6:	f8 94       	cli
+
+000003f8 <__stop_program>:
+ 3f8:	ff cf       	rjmp	.-2      	; 0x3f8 <__stop_program>
